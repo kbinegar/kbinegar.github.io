@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jordan Ellis — Technical Writer</title>
+<meta name="description" content="Technical writing portfolio of Jordan Ellis: documentation, tutorials, and process writing.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="shell">
+
+  <!-- Sidebar acts as a table of contents, like a doc site -->
+  <nav class="sidebar" aria-label="Site sections">
+    <p class="name">Jordan Ellis</p>
+    <p class="role">Technical Writer</p>
+
+    <ul class="toc">
+      <li><a href="#about"><span class="num">01</span> About</a></li>
+      <li><a href="#resume"><span class="num">02</span> Resume</a></li>
+      <li><a href="#portfolio"><span class="num">03</span> Portfolio</a></li>
+      <li><a href="#blog"><span class="num">04</span> Blog</a></li>
+      <li><a href="#how-i-built-this"><span class="num">05</span> How I Built This</a></li>
+    </ul>
+
+    <div class="meta">
+      Rev. July 2026<br>
+      Built with HTML/CSS<br>
+      Hosted on GitHub Pages
+    </div>
+  </nav>
+
+  <main class="content">
+
+    <!-- 01 ABOUT -->
+    <section id="about">
+      <p class="eyebrow">01 / About</p>
+      <h1>I write documentation people actually finish reading.</h1>
+      <p class="lede">
+        Replace this with your own opening line. Say what you write, who you write it for,
+        and what you're aiming for in your first role — e.g. API docs, developer tutorials,
+        onboarding guides, or user-facing help centers.
+      </p>
+      <p>
+        A short second paragraph works well here: your background before technical writing
+        (even if unrelated — many technical writers come from teaching, engineering, support,
+        or journalism), and what drew you to explaining things clearly for a living.
+      </p>
+      <div class="hero-tags">
+        <span class="tag">API Documentation</span>
+        <span class="tag">Tutorials</span>
+        <span class="tag">Markdown / Docs-as-Code</span>
+        <span class="tag">Style Guides</span>
+      </div>
+    </section>
+
+    <!-- 02 RESUME -->
+    <section id="resume">
+      <p class="eyebrow">02 / Resume</p>
+      <h2>Resume</h2>
+      <p>A short line pointing people to the full document, plus the highlights inline so
+        recruiters don't have to click to get the gist.</p>
+
+      <a class="resume-download" href="resume.pdf" download>Download PDF resume ↓</a>
+
+      <h3>Experience</h3>
+      <div class="timeline-item">
+        <span class="dates">2024 — Present</span>
+        <h3>Role Title, Company Name</h3>
+        <p>One or two lines on what you actually did, written the way you'd write a
+          resume bullet: specific, active verb, measurable if possible.</p>
+      </div>
+      <div class="timeline-item">
+        <span class="dates">2022 — 2024</span>
+        <h3>Previous Role, Previous Company</h3>
+        <p>Same pattern. If you're new to technical writing, this can be an adjacent
+          role — support, QA, teaching, engineering — framed around the transferable parts.</p>
+      </div>
+
+      <h3>Skills</h3>
+      <p>Markdown, Git, static site generators, API reference tools (e.g. Swagger/OpenAPI),
+        style guides (e.g. Microsoft or Google style), screenshots/diagramming tools.</p>
+    </section>
+
+    <!-- 03 PORTFOLIO -->
+    <section id="portfolio">
+      <p class="eyebrow">03 / Portfolio</p>
+      <h2>Writing Samples</h2>
+      <p>Each sample below is its own page. Swap these placeholders for real pieces —
+        even a rewritten version of an existing product's confusing docs counts as a sample
+        when you're starting out.</p>
+
+      <div class="card-grid">
+        <a class="card" href="samples/api-guide.html">
+          <span class="num">Sample 01</span>
+          <h3>Getting Started: Weather API</h3>
+          <p>A quickstart guide written for developers with zero context on the product.</p>
+          <div class="tags"><span class="tag">API Docs</span> <span class="tag">Tutorial</span></div>
+        </a>
+        <a class="card" href="samples/how-to-guide.html">
+          <span class="num">Sample 02</span>
+          <h3>How to Set Up Two-Factor Authentication</h3>
+          <p>A step-by-step, screenshot-driven how-to for a non-technical audience.</p>
+          <div class="tags"><span class="tag">How-To</span> <span class="tag">End Users</span></div>
+        </a>
+      </div>
+    </section>
+
+    <!-- 04 BLOG -->
+    <section id="blog">
+      <p class="eyebrow">04 / Blog</p>
+      <h2>Blog</h2>
+      <p>Short posts about technical writing itself — tools, process, things you learned.
+        This is often what convinces a hiring manager you think about the craft, not just
+        that you can produce a doc.</p>
+
+      <div class="card-grid">
+        <a class="card" href="blog/first-post.html">
+          <span class="num">July 2026</span>
+          <h3>Why I'm Learning Technical Writing</h3>
+          <p>One paragraph on your motivation and what you're focusing on first.</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- 05 HOW I BUILT THIS -->
+    <section id="how-i-built-this">
+      <p class="eyebrow">05 / How I Built This</p>
+      <h2>How I Built This Site</h2>
+      <p>This section is itself a writing sample — documenting your own process is a small
+        proof of the exact skill you're trying to demonstrate.</p>
+
+      <div class="build-note">
+        Replace this with your real build notes: what tools you used, what you'd
+        never used before, and one decision you had to make and why.
+      </div>
+
+      <h3>Stack</h3>
+      <p>Plain HTML and CSS, no framework or build step. Hosted free on
+        <code>GitHub Pages</code>, deployed straight from the repository's main branch.</p>
+
+      <h3>Structure</h3>
+      <p>One <code>index.html</code> with the five main sections as anchors, plus
+        standalone pages under <code>/samples</code> and <code>/blog</code> so each
+        writing piece has its own shareable link.</p>
+
+      <h3>What I'd do differently next time</h3>
+      <p>A candid line or two here goes a long way — it shows you can evaluate your own work,
+        which is a core technical writing skill.</p>
+    </section>
+
+  </main>
+</div>
+
+</body>
+</html>
