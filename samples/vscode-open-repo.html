@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Open a Local Git Repository in VS Code — Kennedy Binegar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<style>
+  pre {
+    background: var(--accent-soft);
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    padding: 1rem 1.25rem;
+    overflow-x: auto;
+    font-family: var(--mono);
+    font-size: 0.88rem;
+    line-height: 1.6;
+  }
+  code {
+    font-family: var(--mono);
+    background: rgba(0,0,0,0.06);
+    padding: 0.1rem 0.4rem;
+    border-radius: 3px;
+    font-size: 0.9em;
+  }
+  pre code { background: none; padding: 0; }
+  ol, ul { color: var(--ink-soft); padding-left: 1.4rem; }
+  ol li, ul li { margin-bottom: 0.6rem; }
+  .file-tree {
+    font-family: var(--mono);
+    font-size: 0.88rem;
+    color: var(--ink-soft);
+    white-space: pre;
+  }
+</style>
+</head>
+<body>
+<div class="shell">
+  <nav class="sidebar" aria-label="Site sections">
+    <p class="name">Kennedy Binegar</p>
+    <p class="role">Technical Writer</p>
+    <ul class="toc">
+      <li><a href="../index.html#about"><span class="num">01</span> About</a></li>
+      <li><a href="../index.html#resume"><span class="num">02</span> Resume</a></li>
+      <li><a href="../index.html#portfolio"><span class="num">03</span> Portfolio</a></li>
+      <li><a href="../index.html#blog"><span class="num">04</span> Blog</a></li>
+      <li><a href="../index.html#how-i-built-this"><span class="num">05</span> How I Built This</a></li>
+    </ul>
+    <div class="meta">← Back to portfolio</div>
+  </nav>
+
+  <main class="content">
+    <p class="eyebrow">Portfolio Sample</p>
+    <h1>Open a Local Git Repository in Visual Studio Code Using Terminal (macOS/Linux)</h1>
+    <p class="lede">This guide explains how to open an existing local Git repository in Visual Studio Code (VS Code) using Terminal.</p>
+
+    <h3>Prerequisites</h3>
+    <ul>
+      <li>Git is installed and available in Terminal (<code>git --version</code>)</li>
+      <li>VS Code is installed</li>
+      <li>A local Git repository exists on your machine</li>
+    </ul>
+
+    <h3>Steps</h3>
+    <ol>
+      <li>
+        <strong>Enable the <code>code</code> command in Terminal</strong><br>
+        This makes VS Code available to Terminal.
+        <p>In VS Code:</p>
+        <ol>
+          <li>Press: <code>Cmd + Shift + P</code></li>
+          <li>Search for: <code>Shell Command: Install 'code' command in PATH</code></li>
+          <li>Press: <code>Enter</code></li>
+        </ol>
+      </li>
+      <li>
+        <strong>Open your repository in Terminal</strong><br>
+        Navigate to your repo in Terminal using:
+        <pre><code>cd ~/path/to/your/repo</code></pre>
+      </li>
+      <li>
+        <strong>Once inside, run:</strong>
+        <pre><code>code .</code></pre>
+        <p>The <code>.</code> opens the current folder. VS Code opens the repository in a new window:</p>
+        <div class="file-tree">Repo_Name
+├── README.md
+├── file.md
+└── .git</div>
+      </li>
+      <li><strong>Click on your file to open &amp; edit</strong></li>
+    </ol>
+
+    <h3>Verify</h3>
+    <p>You should see your repository open in a new VS Code window, with files listed in the Explorer panel.</p>
+  </main>
+</div>
+</body>
+</html>
