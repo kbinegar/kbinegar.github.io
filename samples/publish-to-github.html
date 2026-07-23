@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Publish a Local Git Repository to GitHub Using VS Code — Kennedy Binegar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<style>
+  code {
+    font-family: var(--mono);
+    background: rgba(0,0,0,0.06);
+    padding: 0.1rem 0.4rem;
+    border-radius: 3px;
+    font-size: 0.9em;
+  }
+  ol, ul { color: var(--ink-soft); padding-left: 1.4rem; }
+  ol li, ul li { margin-bottom: 0.6rem; }
+  .confirm-box {
+    background: var(--accent-soft);
+    border-left: 3px solid var(--accent);
+    padding: 1rem 1.25rem;
+    border-radius: 0 6px 6px 0;
+    font-family: var(--mono);
+    font-size: 0.88rem;
+    margin: 1rem 0;
+  }
+</style>
+</head>
+<body>
+<div class="shell">
+  <nav class="sidebar" aria-label="Site sections">
+    <p class="name">Kennedy Binegar</p>
+    <p class="role">Technical Writer</p>
+    <ul class="toc">
+      <li><a href="../index.html#about"><span class="num">01</span> About</a></li>
+      <li><a href="../index.html#resume"><span class="num">02</span> Resume</a></li>
+      <li><a href="../index.html#portfolio"><span class="num">03</span> Portfolio</a></li>
+      <li><a href="../index.html#blog"><span class="num">04</span> Blog</a></li>
+      <li><a href="../index.html#how-i-built-this"><span class="num">05</span> How I Built This</a></li>
+    </ul>
+    <div class="meta">← Back to portfolio</div>
+  </nav>
+
+  <main class="content">
+    <p class="eyebrow">Portfolio Sample</p>
+    <h1>Publish a Local Git Repository to GitHub Using Visual Studio Code</h1>
+    <p class="lede">This guide explains how to publish an existing local Git repository to GitHub using the Source Control features in VS Code.</p>
+
+    <h3>Prerequisites</h3>
+    <ol>
+      <li>A GitHub account</li>
+      <li>Git is installed and available in Terminal (<code>git --version</code>)</li>
+      <li>Visual Studio Code is installed</li>
+      <li>A local Git repository exists on your machine</li>
+    </ol>
+
+    <h3>Steps</h3>
+    <ol>
+      <li><strong>Open the project folder in VS Code</strong></li>
+      <li>
+        <strong>Open the Source Control panel</strong>
+        <ul>
+          <li>Press <code>Cmd+Shift+G</code></li>
+          <li>Or, select Source Control in the sidebar</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Stage changes</strong>
+        <ul>
+          <li>In the Source Control panel, select the <code>+</code> icon next to a file to stage it, or</li>
+          <li>Select the <code>+</code> icon next to <strong>Changes</strong> to stage all files</li>
+        </ul>
+        <p>Staging changes determines which modifications are included in a commit.</p>
+      </li>
+      <li>
+        <strong>Make a commit</strong>
+        <ol>
+          <li>In the Source Control panel, review the staged files under <strong>Staged Changes</strong></li>
+          <li>Enter a descriptive commit message in the text box and press <strong>Commit</strong></li>
+        </ol>
+      </li>
+      <li>
+        <strong>Publish to GitHub</strong>
+        <ol>
+          <li>Under <strong>Repositories</strong>, select Publish to GitHub</li>
+          <li>A pop-up appears with the message: <em>"The extension 'GitHub' wants to sign in using GitHub."</em> Select <strong>Allow</strong></li>
+          <li>A new browser tab opens
+            <ul>
+              <li>If you are already signed in, select <strong>Continue</strong> or <strong>Use a different account</strong></li>
+              <li>If you are not signed in, sign in to GitHub when prompted</li>
+            </ul>
+          </li>
+          <li>Authorize VS Code in GitHub when prompted
+            <ul>
+              <li>If prompted, verify your email to continue</li>
+              <li>After authentication, VS Code displays publishing options:
+                <ul>
+                  <li><code>Publish to GitHub private repository username/repo_name</code></li>
+                  <li><code>Publish to GitHub public repository username/repo_name</code></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>Select a visibility option and press Enter</li>
+        </ol>
+      </li>
+    </ol>
+
+    <h3>Verify</h3>
+    <p>After publishing, a confirmation message appears:</p>
+    <div class="confirm-box">Successfully published the "username/repo_name" repository to GitHub</div>
+    <p>Select <strong>Open on GitHub</strong> to view the repository.</p>
+    <p>Confirm that:</p>
+    <ul>
+      <li>The repository appears on GitHub</li>
+      <li>Your files are visible</li>
+      <li>The commit history matches your local repository</li>
+    </ul>
+  </main>
+</div>
+</body>
+</html>
