@@ -1,43 +1,61 @@
-# Portfolio Starter — Deployment & Customization Guide
+# Kennedy Binegar — Technical Writing Portfolio
 
-## 1. Put this on GitHub
+Live site: **[kbinegar.github.io](https://kbinegar.github.io/)**
 
-1. Create a new repository on GitHub named **exactly** `yourusername.github.io`
-   (replace `yourusername` with your actual GitHub username). This special name
-   is what makes GitHub Pages serve it at the root URL automatically.
-2. Upload all these files to that repository (drag-and-drop on GitHub's web UI
-   works fine, or use git from the command line — either way, no build tools needed).
-3. Go to the repo's **Settings → Pages**. Under "Source," select the `main`
-   branch and `/ (root)` folder, then save.
-4. Wait 1–2 minutes. Your site will be live at `https://yourusername.github.io`.
+A personal portfolio site built to showcase technical writing samples, resume,
+and background — structured like a small documentation site, with a sidebar
+table of contents and numbered sections.
 
-## 2. Customize the content
+## Sections
 
-- **index.html** — replace every placeholder paragraph (marked in plain
-  English, not lorem ipsum) with your real bio, resume highlights, and
-  section text.
-- **resume.pdf** — add your actual resume PDF to the root folder so the
-  download button on the Resume section works. (Or delete that link if you'd
-  rather keep the resume web-only.)
-- **samples/** — each file is one portfolio piece. Duplicate the pattern to
-  add more; just update the `<a class="card">` links on the homepage to match.
-- **blog/** — same pattern for posts. This is the easiest part to keep adding
-  to over time, which is good — a portfolio that visibly grows is itself a
-  signal to hiring managers.
+- **01 / About** — background and focus areas
+- **02 / Resume** — downloadable PDF plus inline experience highlights
+- **03 / Portfolio** — writing samples, each as its own linked page
+- **04 / Blog** — short posts on technical writing process and craft
+- **05 / How I Built This** — notes on the site's own build, doubling as a
+  writing sample in itself
 
-## 3. Iterating with Claude
+## Stack
 
-Once you've got real content (a real bio, resume, and one or two writing
-samples), come back and paste them in — I can:
-- Rewrite the placeholder copy in your voice
-- Add a proper contact section or a simple contact form
-- Turn the blog into something you can update by just dropping in Markdown
-  files instead of hand-writing HTML each time
-- Do a design pass once there's real content in place (styling decisions
-  land better against real text than placeholder text)
+Plain HTML and CSS — no framework, no build step, no dependencies to install.
+Hosted free on GitHub Pages, deployed straight from the `main` branch.
 
-## 4. Custom domain (optional, later)
+## Structure
 
-If you eventually buy a domain, GitHub Pages supports it directly — Settings →
-Pages → Custom domain. Not necessary to start; `yourusername.github.io` is a
-perfectly credible portfolio URL on its own.
+```
+index.html           → homepage with all five sections as anchors
+style.css            → shared styling across every page
+resume.pdf           → downloadable resume
+samples/             → one HTML page per portfolio writing sample
+blog/                → one HTML page per blog post
+images/favicon/      → favicon assets
+```
+
+Each portfolio sample and blog post is a standalone page (not just a
+scroll-anchor) so it has its own shareable URL — useful when linking a single
+writing sample directly in a job application.
+
+## Adding new content
+
+**A new portfolio sample:**
+1. Duplicate an existing file in `/samples` as a starting template
+2. Update the content and `<title>`
+3. Add a matching `<a class="card">` link to the Portfolio section in `index.html`
+
+**A new blog post:** same pattern, using `/blog` instead.
+
+## Local preview
+
+No build step required — open `index.html` directly in a browser, or serve
+the folder locally with:
+
+```
+python3 -m http.server
+```
+
+then visit `http://localhost:8000`.
+
+## Deployment
+
+Pushes to `main` publish automatically via GitHub Pages
+(Settings → Pages → Source: `main` / root).
